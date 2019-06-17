@@ -39,10 +39,11 @@ public class TicTacToe {
   }
 
   private boolean isWin() {
-    for (int index = 0; index < SIZE; index++) {
-      if (board[0][index] == lastPlayer &&
-          board[1][index] == lastPlayer &&
-          board[2][index] == lastPlayer) {
+    int playerTotal = lastPlayer * 3;
+    for (int i = 0; i < SIZE; i++) {
+      if (board[0][i] + board[1][i] + board[2][i] == playerTotal) {
+        return true;
+      } else if (playerTotal == board[i][0] + board[i][1] + board[i][2]) {
         return true;
       }
     }
