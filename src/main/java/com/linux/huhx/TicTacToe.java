@@ -23,4 +23,8 @@ public class TicTacToe {
       throw new RuntimeException("X is outside board");
     }
   }
+
+  public char nextPlayer() {
+    return 'X';
+  }
 }
