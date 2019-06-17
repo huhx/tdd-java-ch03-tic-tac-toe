@@ -28,8 +28,8 @@ public class TicTacToe {
     }
   }
 
-  private void checkAxis(int x) {
-    if (x < 1 || x > 3) {
+  private void checkAxis(int axis) {
+    if (axis < 1 || axis > 3) {
       throw new RuntimeException("X is outside board");
     }
   }
