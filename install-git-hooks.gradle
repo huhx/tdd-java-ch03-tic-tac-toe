@@ -3,10 +3,9 @@ tasks.create(name: 'gitExecutableHooks') << {
 }
 
 task installGitHooks(type: Copy) {
-    from new File(rootProject.rootDir, 'pre-commit')
+    from new File(rootProject.rootDir, 'pre-push')
     into { new File(rootProject.rootDir, '.git/hooks') }
-    println 'copy pre-commit file to .git/hooks successful'
+    println 'copy pre-push file to .git/hooks successful'
 }
 
 gitExecutableHooks.dependsOn installGitHooks
-build.dependsOn gitExecutableHooks
