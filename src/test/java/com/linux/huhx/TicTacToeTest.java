@@ -93,6 +93,7 @@ public class TicTacToeTest {
     ticTacToe.play(2, 2); // X
     ticTacToe.play(1, 2); // O
     String actual = ticTacToe.play(3, 1); // O
+
     assertEquals("X is the winner", actual);
   }
 
