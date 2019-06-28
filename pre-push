@@ -11,8 +11,8 @@ then
   # return the './gradlew build' exit code
   exit $RESULT
 else
-  echo "tree is dirty, please commit changes before running this"
-  exit 0
+  echo ERROR: Please stash your uncommit files before push code
+  exit 1
 fi
 
 
